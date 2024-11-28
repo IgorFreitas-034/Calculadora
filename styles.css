@@ -1,0 +1,104 @@
+/* Resetando margens e padding para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0; /* Cor de fundo mais suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container principal da calculadora */
+.container {
+    background-color: #2c3e50; /* Fundo escuro para a calculadora */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Display da calculadora */
+#display {
+    background-color: #34495e; /* Fundo do display mais escuro */
+    color: #ecf0f1; /* Texto claro */
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Estilo dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.num-btn {
+    background-color: #1abc9c; /* Cor de fundo para os botões */
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #ffffff; /* Texto branco */
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.num-btn:hover {
+    background-color: #16a085; /* Cor ao passar o mouse */
+}
+
+.num-btn:active {
+    background-color: #1abc9c; /* Cor ativa */
+}
+
+/* Botões específicos */
+.clear-btn {
+    background-color: #e74c3c; /* Cor de fundo para limpar */
+    color: #ffffff;
+}
+
+.clear-btn:hover {
+    background-color: #c0392b; /* Cor ao passar o mouse */
+}
+
+.equal-btn {
+    background-color: #3498db; /* Cor de fundo para igual */
+    color: white;
+    grid-column: span 2;
+}
+
+.equal-btn:hover {
+    background-color: #2980b9; /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #display {
+        font-size: 2rem;
+    }
+
+    .num-btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
